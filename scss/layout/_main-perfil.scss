@@ -1,0 +1,141 @@
+.hero-contain{
+    min-width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    @include grid (1fr, 27% 1fr 10%); /*header main footer*/
+    grid-template-areas: 
+    "header header" /*plantilla*/
+    "contenido contenido"
+    "footer footer";
+}
+.mi-header{
+    grid-area: header;
+}
+
+.contenido-main-cuatro{
+    grid-area: contenido;
+    background-color: $background-principal;
+    display: flex;
+}
+
+.footer{
+    grid-area: footer;
+    background-color: $footer-color;
+}
+
+/*MAIN*/
+.contenido-main-cuatro{
+    min-width: 100%;
+    @include grid (200px 1fr, 1fr);
+    grid-template-areas: 
+    "menu-izquierdo main-lado-derecho"
+    ;
+}
+.contenido-main-cuatro .menu-izquierdo{ /*solucion*/
+    grid-area: menu-izquierdo;
+    display: flex;
+    min-width: 100%;
+    flex-direction: column;
+}
+.contenido-main-cuatro .contenido-main-cuatro-right{  /*solucion*/
+    grid-area: main-lado-derecho;
+    display: flex;
+    min-width: 100%;
+    flex-direction: column;
+}
+
+/*MAIN HTML N4*/
+.portada-perfil{
+    @include flex (100%, center, end);
+    background-color: violet;
+    padding-top: 30px;
+}
+    .foto-perfil{
+        width: 15%;
+        height: 15%;
+    }
+
+
+/*Botones*/
+
+.boton-dulces-boton{
+    @include grid (repeat(3, 1fr), 1fr);
+    grid-template-areas: 
+    "boton-perfil-1 nombre-empresa-location boton-perfil-2"
+    ;
+    padding: 20px 0px;
+    justify-items: center;
+    align-items: center;
+}
+.boton-perfil-1{
+    grid-area: boton-perfil-1;
+    button{
+        background-color: $background-principal;
+        border: 1px solid #000;
+        padding: 15px;
+        border-radius: 20px;
+    }
+}
+.nombre-empresa-location{
+    grid-area: nombre-empresa-location;
+    @include flex (100%, center, center);
+    flex-direction: column;
+    gap: 5px;
+    h3{
+        font-size: 25px;
+        font-family: $font-titulos;
+    }
+}
+.barquisimeto{
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+.boton-perfil-2{
+    grid-area: boton-perfil-2;
+    button{
+        background-color: $background-principal;
+        border: 1px solid #000;
+        padding: 15px;
+        border-radius: 20px;
+        .color-lyrics{
+            color: #000;
+        }
+    }
+}
+.location{
+    @include flex (100%, center, center);
+}
+.marcador-de-posicion{
+    width: 7%;
+    height: 7%;
+}
+.endulzando-frase{
+    @extend .location;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*Seccion de fotos del perfil*/
+.secciones-tittle-imagenes{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding:0px 20px 50px 20px;
+}
+.carou-1 h4{
+    padding:30px 20px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+    .imagenes-perfil{
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-around;
+    }
+
+.size-imagen-perfil{
+    width: 250px;
+    height: 360px;
+}

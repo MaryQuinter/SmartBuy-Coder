@@ -1,0 +1,110 @@
+/*Secciones dentro del contenedor*/
+
+/*header*/
+.mi-header{
+    min-width: 100%;
+    display: grid;
+    grid-template-rows: 20% 20% 60%;
+}
+
+/*linea uno*/
+        .linea-1{
+            @include flex (100%, space-between, center);
+            font-size: 20px;
+            background-color: $background-negro;
+            .barra-pais{
+                justify-self: start;
+                font-family: 'Open Sans', sans-serif;
+                color: #ffffff;
+                font-size: 95%;
+                select{
+                    height: 20px;
+                    .smartbuy-centro{
+                        justify-self: center;
+                    }
+                }
+            }
+        }
+        .logo-principal{
+            display: flex;
+            align-items: center;
+            font-family: 'Open Sans', sans-serif;
+            color: #ffffff;
+            font-size: 85%;
+            img{
+                height: 30px;
+                width: 30px;
+            }
+        }
+
+        .icono-sizesi{
+            width: 20px;
+            height: 20px;
+        }
+
+
+/*linea dos*/
+.linea-2{
+    background-color: #ffffff;                
+    @include grid (1fr 200px 1fr 1fr, 1fr);
+    grid-template-areas: 
+    "lengua search bienvenido nuevo";
+    align-items: center;
+    font-family: $font-parrafos;
+    font-weight: 600;
+    font-size: 95%;
+    div{
+        display: flex;
+        width: 100%;
+    }
+}
+
+.lengua{
+    grid-area: lengua;
+    justify-content: flex-start;
+    label{
+        font-size:18px;
+    }
+}
+
+.search-container{
+    grid-area:search;
+    justify-content: flex-start;
+    input{
+        min-width: auto;
+        width: 100%;
+    }
+}
+        /*.icono-search{
+            position: absolute;
+            margin-left: 3%;
+            margin-top: 1%;
+        }*/
+
+.bienvenido{
+    grid-area:bienvenido;
+    justify-content: flex-end;
+}
+
+.nuevo{
+    grid-area: nuevo;
+    justify-content: center;
+    justify-self: end;
+}
+
+/*linea-tres*/
+.linea-3{
+    background-image: url(../assets/img/womanbanner.jpg);
+    display: flex;
+    width: 100%;
+    background-size: cover;
+    background-position: 80% 42%;
+    justify-content: flex-end;
+    h1{
+        text-align: right;
+        color: #fff;
+        font-family: $font-titulos;  
+        font-size: 40px;
+}
+}
+

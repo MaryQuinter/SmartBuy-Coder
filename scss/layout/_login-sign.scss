@@ -1,0 +1,71 @@
+/*:root{
+    --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
+    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
+    'Fira Mono','Droid Sans Mono', 'Courier New', monospace; 
+    --transition: all 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}*/
+
+.bodyLogin{
+    font-family: $font-titulos;
+    color: #444;
+}
+
+.loginSignSection{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1em;
+    gap: 5px;
+    img span{
+        font-size: 1em;
+        text-align: center;
+        width: 100%; 
+        margin-bottom: 1em;
+        font-size: 2.5em;
+    }
+}
+
+.tituloSmartBuy{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.0em;
+    font-family: $font-titulos;
+    color: #000000;
+}
+
+section .formLoginSign{
+    padding: 1.5em;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 500px;
+    border-radius: 20px;
+    border: 2px solid #9D4AA8;
+    margin: 5px;
+    input{
+        width: 100%;
+        margin-bottom: 1em;
+        padding: 0.8em;
+        border-radius: 9px;
+        border: none;
+        outline-color: #d9d9d9;
+        background-color: $background-principal;
+    }
+}
+
+.loginSignSection form input[type= 'submit']{
+    margin-top: 1.5em;
+    background-color: #000000;
+    color: #fff;
+    font-family: $font-parrafos;
+}
+.loginSignSection form input[type= 'submit']:active{
+    transform: scale();
+}
+
+
+
+

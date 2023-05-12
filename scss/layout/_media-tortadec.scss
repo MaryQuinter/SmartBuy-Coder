@@ -1,0 +1,220 @@
+/*Media Queries*/
+    /*TORTA DE CHOCOLATE tercera pagina*/
+
+    @media (max-width: 1000px){
+        .contenedor-foto-descripcion {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-areas: 
+            "it-1"
+            "it-2"
+            ;
+        }
+        .it-1{
+            grid-area: it-1;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .it-2{
+            grid-area: it-2;
+            display: flex;
+            width: 100%;
+            align-items: center;
+            background-color: #F6F1F1;
+        }
+        .imagen-de-torta{
+            width: 95%;
+            height: 100%;
+        }
+        .arreglos{
+            margin-top: 25px;
+        }
+        }
+    
+    
+    @media (max-width: 805px){
+        .contenido-main-tres{
+            min-width: 100%;
+            display: grid;
+            grid-template-rows: 2% 1fr;
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+            "menu-izquierdo"
+            "contenido-main-tres-right"
+            ;
+        }
+        .menu-izquierdo a{
+            padding: 11px 0px 11px 20px;
+            align-items: center;
+            color: #000;
+        }
+        .menu-display-none{
+            display: none;
+            background-color: #f9f9f9;
+        }
+        .contenido-main-tres .menu-izquierdo{ /*solucion*/
+            grid-area: menu-izquierdo;
+            display: flex;
+            min-width: 100%;
+            justify-content: space-between;
+        }
+        .contenido-main-tres .contenido-main-tres-right{  /*solucion*/
+            grid-area: contenido-main-tres-right;
+            display: flex;
+            flex-direction: column;
+        }
+        .contenido-main-tres .arregloss{
+            margin-top: 23px;
+        }
+        .stiky hr{
+            display: none;
+        }
+    }
+    
+    @media (max-width: 597px){
+        .contenedor-foto-descripcion{
+            gap: 20px;
+        }
+    
+        .botones-de-compra {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 20% 1fr 1fr;
+            grid-template-areas:
+            "deseas deseas"
+            "separar-botones separar-botones-dos"
+            "boton-compra-post boton-compra-post";
+            padding: 20px 0px;
+            gap: 15px;
+            justify-items: center;
+        }
+        }
+    
+    @media (max-width: 540px){
+            .imagen-de-torta {
+                width: 95%;
+                height: 90%;
+            }
+            .comentarios-post-container{
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr;
+                grid-template-areas: 
+                "square-comment"
+                "square-comment-dos"
+                ;
+            }
+            .square-comment{
+                grid-area: square-comment;
+                display: flex;
+                width: 100%;
+            }
+            .square-comment-dos{
+                grid-area: square-comment-dos;
+                border-left: none;
+                border-top: solid 1px gray;
+                display: flex;
+                width: 100%;
+            }
+        }
+        @media (max-width: 540px){
+            .logo-banner{
+                width: 80px;
+                height: 80px;
+            }
+            .tienda-nombre p {
+                font-size: 20px;
+            }
+            .visita-catalogo p {
+                font-size: 15px;
+            }
+            .boton-a-perfil {
+                padding: 8px 12px;
+                font-size: 17px;
+            }
+        }
+        @media (max-width: 442px){
+            .contenedor-foto-descripcion {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 40% 1fr;
+                grid-template-areas: 
+                "it-1"
+                "it-2"
+                ;
+            }
+        }
+        @media (max-width: 420px){
+            .logo-banner{
+                width: 50px;
+                height: 50px;
+            }
+            .tienda-nombre p {
+                font-size: 17px;
+            }
+            .visita-catalogo p {
+                font-size: 10px;
+            }
+            .boton-a-perfil {
+                padding: 8px 11px;
+                font-size: 15px;
+            }
+        }
+        @media (max-width: 402px){
+            .contenedor-foto-descripcion {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 40% 60%;
+                grid-template-areas: 
+                "it-1"
+                "it-2"
+                ;
+            }
+            .icono-alinear{
+                width: 20px;
+                height: 20px;
+            }
+            .heart{
+                width: 25px;
+                height: 25px;
+            }
+            .me-gusta-foto{
+                font-size: 13px;
+                padding-left: 5px;
+            }
+            .titulo-tienda{
+                font-size: 18px;
+                background-color: #F6F1F1;
+                width: 100%;
+            }
+            .parrafo p{
+                font-family: 'Open Sans', sans-serif;
+                padding: 5px;
+                font-size: 13px;
+                font-weight: lighter;
+            }
+            .short-description div{
+                font-size: 13px;
+            }
+            .ubicacion{
+                font-size: 13px;
+            }
+            .arreglos {
+                margin-top: 30px;
+        }
+        .deseas{
+            font-weight: 20px;
+        }
+        .separar-botones{
+            font-weight: 16px;
+            padding: 7px;
+        }
+        .separar-botones-dos{
+            font-weight: 13px;
+            padding: 7px;
+        }
+    }

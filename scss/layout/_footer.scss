@@ -1,0 +1,20 @@
+/*footer*/
+
+.hero-3-footer{
+    grid-area: footer;
+    background-color: #FF0000;
+    font-family: 'Inter', sans-serif;  
+    font-weight: 33px;
+    font-size: 15px;
+    & .first-info{
+        @include flex (100%, center, center);
+        padding-bottom: 3px;
+    }
+}
+
+.hero-3-footer .second-list{
+    @include flex (100%, center, center);
+    list-style: none;
+    gap: 18px;
+    padding: 3px;
+}

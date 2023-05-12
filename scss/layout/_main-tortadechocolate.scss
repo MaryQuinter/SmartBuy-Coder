@@ -1,0 +1,303 @@
+.hero-contain{
+    min-width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    @include grid (1fr, 27% 1fr 10%); /*header main footer*/
+    grid-template-areas: 
+    "header header" /*plantilla*/
+    "contenido contenido"
+    "footer footer";
+}
+.mi-header{
+    grid-area: header;
+}
+
+.contenido-main-tres{
+    grid-area: contenido;
+    background-color: $background-principal;
+    display: flex;
+}
+
+.footer{
+    grid-area: footer;
+    background-color: $footer-color;
+}
+
+.contenido-main-tres{
+    min-width: 100%;
+    @include grid (200px 1fr, 1fr);
+    grid-template-areas: 
+    "menu-izquierdo contenido-main-tres-right"
+    ;
+}
+.contenido-main-tres .menu-izquierdo{ /*solucion*/
+    grid-area: menu-izquierdo;
+    display: flex;
+    min-width: 100%;
+    flex-direction: column;
+}
+.contenido-main-tres .contenido-main-tres-right{  /*solucion*/
+    grid-area: contenido-main-tres-right;
+    display: flex;
+    min-width: 100%;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/*Encbezado de seccion*/
+
+.contenido-main-tres .arreglos{
+    font-family: $font-parrafos;
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.contenido-main-tres h2{
+    margin-bottom: 20px;
+    font-family: $font-titulos;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+/*Contenedor de publicacion*/
+
+.contenedor-foto-descripcion{
+    @include grid (repeat(2, 1fr), 1fr);
+}
+.imagen-de-torta{
+    width: 90%;
+    height: 93%;
+}
+.items-line{
+    @include grid (10% 1fr repeat(3, 10%), 1fr);
+    width: 96%;
+}
+.me-gusta-foto{
+    @include flex (100%, start, center);
+    font-family: $font-parrafos;
+    font-weight: 600;
+}
+.icono-alinear{
+    display:flex;
+    align-self: center;
+}
+
+/*Descripcion del producto right*/
+
+/*Nombre de tienda y ubicacion*/
+.store-name{
+    @include grid (50px 1fr, 1fr);
+    padding: 0px 10px 10px 10px;
+    img{
+        display: flex;
+        width: 40px;
+        height: 40px;
+        .text{
+            display: block;
+            font-family: $font-parrafos;
+            width: 100%;
+            align-items: center;
+        }
+    }
+}
+.titulo-tienda{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+}
+#pisar-style{
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+}
+.parrafo p{
+    font-family: 'Open Sans', sans-serif;
+    padding: 5px;
+    font-size: 200;
+    font-weight: lighter;
+}
+
+/*time, delivery, ...*/
+.short-description{
+    @include grid ( 8% 1fr, repeat(3, 1fr));
+    padding: 20px;
+    gap: 12px;
+    img{
+        @include flex (100%, start, center);
+    }
+}
+.short-description div{
+    @extend img;
+    font-family: $font-parrafos;
+    font-weight: 600;
+}
+
+.ubicacion{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    font-family: $font-parrafos;
+    padding: 0px 20px 20px 30px;
+}
+
+/*Botones de compra POST*/
+
+.botones-de-compra{
+    @include grid (1fr 1fr 40%, 1fr 1fr);
+    grid-template-areas: 
+    "deseas deseas ."
+    "separar-botones separar-botones-dos boton-compra-post"
+    ;
+    padding: 20px 0px;
+    gap: 10px;
+    justify-items: center;
+}
+.deseas{
+    grid-area: deseas;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 30px;
+}
+.separar-botones{
+    grid-area: separar-botones;
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #9D4AA8;
+    border-radius: 20px;
+    color: #f9f9f9;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 40px;
+}
+.separar-botones-dos{
+    grid-area: separar-botones-dos;
+    @include flex (80%, center, center);
+    padding: 10px;
+    background-color: #000;
+    border-radius: 20px;
+    color: #9D4AA8;
+    font-family: $font-titulos;
+    font-weight: 40px;
+}
+.boton-compra-post{
+    grid-area:boton-compra-post;
+    background-color: #f9f9f9;
+    border: 1px solid #9D4AA8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+/*Comentarios POST*/
+
+.comentarios-post-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    .square-comment{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+}
+.square-comment-dos{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    border-left: solid 1px gray;
+}
+
+.comentarios-tittle{
+    display: flex;
+    width: 100%;
+    justify-content: start;
+    padding: 25px 0px 0px 35px;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: $font-titulos;
+    gap: 8px;
+    padding-bottom: 20px;
+}
+
+.usuarios-phrase{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding-left: 15px;
+    img{
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+}
+.usuarios-phrase span{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: $font-titulos;
+}
+.espacio-entre-comentarios{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    padding-bottom: 30px;
+    p{
+        font-family: $font-parrafos;
+        padding-left: 15px;
+    }
+}
+
+/*Visitar perfil*/
+
+.visitar-perfil-container{
+    @include flex (100%, space-around, center);
+    padding: 20px 0px;
+    margin-top: 30px;
+}
+.imagen-banner{
+    background-image: url(../assets/img/banner-tortas.jpg);
+    background-position: 40% 72%;
+}
+.tienda-nombre{
+    @include flex (50%, center, center);
+    gap: 10px;
+    p{
+        font-size: 30px;
+        font-weight: 600;
+        font-family: $font-titulos;
+    }
+}
+.logo-banner{
+    width: 120px;
+    height: 120px;
+}
+.visita-catalogo{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    p{
+        font-size: 20px;
+        font-weight: 600;
+        font-family: $font-parrafos;
+    }
+}
+.boton-a-perfil{
+    background-color: #AF0404;
+    color: #fff;
+    padding: 12px 30px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: $font-titulos;
+    border: solid #AF0404;
+    border-radius: 20px;
+}

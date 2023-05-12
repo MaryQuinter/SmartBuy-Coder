@@ -1,0 +1,122 @@
+/*MAIN*/
+
+.contenido-main-cinco-pedido{
+    min-width: 100%;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 200px 1fr;
+    grid-template-areas: 
+    "menu-izquierdo contenido-carrito-dos-derecha"
+    ;
+  }
+  .contenido-main-cinco-pedido .menu-izquierdo{ /*solucion*/
+    grid-area: menu-izquierdo;
+    display: flex;
+    min-width: 100%;
+    flex-direction: column;
+  }
+  .contenido-main-cinco-pedido .contenido-carrito-dos-derecha{  /*solucion*/
+    grid-area: contenido-carrito-dos-derecha;
+    display: flex;
+    min-width: 100%;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+
+/*******************Main CARRITO lado derecho*/
+  
+.contenedor-carrito{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .titulo-principal{
+    font-family: 'Roboto', sans-serif;
+    color: #000;
+  }
+  .carrito-vacio,
+  .carrito-comprado{
+    font-family: 'Open Sans', sans-serif;
+    color: #000;
+  }
+  
+  .carrito-productos{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  
+  }
+  
+  .carrito-producto{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F5EDED;
+    color: #9D4AA8;
+    padding: 0.5rem;
+    padding-right: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 1rem;
+  }
+  
+  .carrito-producto-imagen{
+    width: 4rem;
+    border-radius: 1rem;
+  }
+  
+  .carrito-producto small{
+  font-size: 0.75rem;
+  }
+  
+  .carrito-producto-eliminar{
+    border: 0;
+    background-color: transparent;
+    color: #AF0404;
+    cursor: pointer;
+  }
+  
+  .carrito-acciones{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .carrito-acciones-vaciar{
+    border: 0;
+    background-color: #9D4AA8;
+    color: #F5EDED;
+    padding: 1rem;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  
+  .carrito-acciones-derech{
+    display: flex;
+  }
+  .carrito-acciones-total{
+    display: flex;
+    background-color: #000;
+    color: #F5EDED;
+    padding: 1rem;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .carrito-acciones-comprar{
+    border: 0;
+    background-color: #444;
+    color: #F5EDED;
+    padding: 1rem;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  
+  /*Oculto*/
+  
+  .disabled{
+    display: none;
+  }
+  

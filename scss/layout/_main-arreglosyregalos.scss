@@ -1,0 +1,154 @@
+/*hero pag arreglosyregalos*/
+
+.hero-contain{
+    min-width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    @include grid (1fr, 27% 1fr 10%); /*header main footer*/
+    grid-template-areas: 
+    "header header" /*plantilla*/
+    "contenido contenido"
+    "footer footer";
+}
+.mi-header{
+    grid-area: header;
+}
+
+.contenido-main-dos{
+    grid-area: contenido;
+    background-color: $background-principal;
+    display: flex;
+}
+
+.footer{
+    grid-area: footer;
+    background-color: $footer-color;
+}
+
+/*MAIN*/
+
+.contenido-main-dos{
+    min-width: 100%;
+    @include grid (200px 1fr, 1fr);
+    grid-template-areas: 
+    "menu-izquierdo contenido-main-dos"
+    ;
+}
+.contenido-main-dos .menu-izquierdo{ /*solucion*/
+    grid-area: menu-izquierdo;
+    display: flex;
+    min-width: 100%;
+    flex-direction: column;
+}
+.contenido-main-dos .contenido-main-dos-right{  /*solucion*/
+    grid-area: contenido-main-dos;
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 100%;
+    flex-direction: column;
+    padding: 20px;
+    .grid-publicaciones .post{
+        width: 100%;
+        display: block;
+        .tamaño-post{
+            width: 100%;
+            height: 295px;
+        }
+    }
+}
+.titulo-arre{
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+    font-family: $font-titulos;
+}
+
+.contenido-main-dos-right .grid-publicaciones{
+    @include grid (repeat(4, 1fr), repeat(3, 33%));
+    gap: 30px 20px;
+    grid-template-areas: none;
+    padding-bottom: 50px;
+}
+
+.encabe-arriba{
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 8px;
+    gap: 8px;
+    .nombre-tienda a{
+        font-family: $font-titulos;
+        font-weight: 600;
+        font-size: 18px;
+        color: $color-titulos;
+        h6{
+            font-family: $font-parrafos;
+            font-weight: 400;
+            font-size: 10px;
+            color: #444444;
+        }
+    }
+}
+
+.ic{
+    width: 40px;
+    height: 40px;
+}
+.ico{
+    width: 30px;
+    height: 30px;
+}
+
+.boton{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 6px;
+    gap: 10px;
+    .tamaño-boton .boton-compra{
+        @include flex (140px, center, center);
+        height: 40px;
+        border-radius: 16px;
+        box-sizing: border-box;
+        border-color: #9D4AA8;
+        cursor: pointer;
+        background-color: $background-principal;
+        font-family: $font-parrafos;
+        font-weight: 600;
+        color: $color-titulos;
+    }
+}
+.boton p{
+    font-family: $font-titulos;
+    font-weight: 500;
+    font-size: 20px;
+    color: $color-titulos;
+    border-radius: 3px;
+}
+.money{
+    display: flex;
+    width: 100%;
+    justify-content: end;
+}
+.money .moneda{
+    font-size: 15px;
+    align-self: center;
+    color: $color-titulos;
+    }
+.money .precio{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.titulo-torta{
+    font-family: $font-parrafos;
+    font-weight: 600;
+    padding: 5px;
+}
+.descripcion-cake{
+    font-size: 13px;
+    font-family: Arial, sans-serif;
+    color: #444444;
+    padding: 5px;
+}

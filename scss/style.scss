@@ -1,0 +1,27 @@
+@import "./base/reset";
+
+@import "./utilities/variables";
+@import "./utilities/mixins";
+
+@import "./base/typo";
+
+@import "./layout/hero-contain";
+@import "./layout/header";
+@import "./layout/main-arreglosyregalos";
+@import "./layout/main-index";
+@import "./layout/main-mensajería";
+@import "./layout/main-perfil";
+@import "./layout/main-tortadechocolate";
+@import "./layout/footer"; 
+
+@import "./layout/media-index";
+@import "./layout/media-arreglosyr";
+@import "./layout/media-tortadec";
+@import "./layout/media-perfil";
+@import "./layout/media-mensajeria";
+@import "./layout/carrito.scss";
+
+// js
+
+@import "./layout/login-sign";
+

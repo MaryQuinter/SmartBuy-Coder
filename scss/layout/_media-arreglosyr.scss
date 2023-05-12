@@ -1,0 +1,113 @@
+/*Media Queries*/
+    /*ARREGLOS Y REGALOS segunda pagina*/
+
+    @media (max-width: 1192px){
+        .contenido-main-dos-right .grid-publicaciones{
+        display: grid;
+        grid-template-columns: repeat(3, 30%);
+        grid-template-rows: repeat(4, 23%);
+        gap: 30px 20px;
+        grid-template-areas: none;
+    }
+
+
+    @media (max-width: 940px){
+        .contenido-main-dos-right .grid-publicaciones{
+        display: grid;
+        grid-template-columns: repeat(2,45%);
+        grid-template-rows: repeat(6, 16%);
+        gap: 30px 20px;
+        grid-template-areas: none;
+    }
+}
+@media (max-width: 805px){
+    .contenido-main-dos{
+        min-width: 100%;
+        display: grid;
+        grid-template-rows: 2% 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "menu-izquierdo"
+        "contenido-main-dos-right"
+        ;
+    }
+    .contenido-main-dos .menu-izquierdo{ /*solucion*/
+        grid-area: menu-izquierdo;
+        display: flex;
+        min-width: 100%;
+        justify-content: space-between;
+    }
+    .lista-centrada{                 /*iconos arriba*/
+        display: flex;
+        min-width: 100%;
+        justify-content: space-between;
+    }
+    .menu-izquierdo a{
+        padding: 11px 0px 11px 20px;
+        align-items: center;
+        color: #000;
+    }
+    .menu-display-none{
+        display: none;
+        background-color: #f9f9f9;
+    }
+    .contenido-main-dos .contenido-main-dos-right{  /*solucion*/
+        grid-area: contenido-main-dos-right;
+        display: flex;
+        flex-direction: column;
+    }
+    .contenido-main-dos-right .grid-publicaciones{
+    justify-content: center;
+    }
+}
+@media (max-width: 615px){
+    .lista-centrada{                 /*iconos arriba*/
+        display: grid;
+        min-width: 100%;
+        justify-content: space-between;
+        grid-template-columns: repeat(4, 23%);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: none;
+        padding-left: 30px;
+    }
+    .contenido-main-dos{
+        grid-template-rows: 3% 1fr;
+        align-items: baseline;
+    }
+    .productos{
+        display: none;
+        background-color: #f9f9f9;
+    }
+    
+}
+@media (max-width: 491px){
+    .contenido-main-dos{
+        min-width: 100%;
+        display: grid;
+        grid-template-rows: 1% 85%;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "menu-izquierdo"
+        "contenido-main-dos-right"
+        ;
+    }
+
+    .contenido-main-dos-right .grid-publicaciones{
+        display: grid;
+        grid-template-columns: 98%;
+        grid-template-rows: repeat(12, 1fr);
+        grid-template-areas: none;
+        padding-top: 0%;
+    }
+    .contenido-main-dos .contenido-main-dos-right{
+        display: flex;
+    }
+    .contenido-main-dos .contenido-main-dos-right .grid-publicaciones .post .tamaño-post {
+        width: 100%;
+        height: 380px;
+    }
+    .post{
+        padding-bottom: 20px;
+    }
+}
+}
